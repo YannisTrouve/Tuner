@@ -22,9 +22,9 @@ while continuer:
     else:
         continuer = False
         break
-    FSAMP = 22050       # Sampling frequency in Hz
-    FRAME_SIZE = 2048   # How many samples per frame?
-    FRAMES_PER_FFT = 16 # FFT takes average across how many frames?
+    FSAMP = 22050       
+    FRAME_SIZE = 2048   
+    FRAMES_PER_FFT = 16 ?
     
 
     SAMPLES_PER_FFT = FRAME_SIZE*FRAMES_PER_FFT
@@ -57,10 +57,7 @@ while continuer:
                                     frames_per_buffer=FRAME_SIZE)
 
     stream.start_stream()
-    # Create Hanning window function
     window = 0.5 * (1 - np.cos(np.linspace(0, 2*np.pi, SAMPLES_PER_FFT, False)))
-    # Print initial text
-    print('sampling at', FSAMP, 'Hz with max resolution of', FREQ_STEP, 'Hz')
 
     accorder = True 
     a = 0
